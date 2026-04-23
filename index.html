@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProScan | Professional Market Scanning Platform</title>
+    <title>ProScan with Tradingview | Professional Market Scanning Platform</title>
     <meta name="description" content="High-performance market scanning platform for professional traders. Scan 1000+ stocks instantly with local data architecture.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -26,13 +26,13 @@
 <body>
     <header>
         <div class="container">
-            <h1>ProScan <span class="status-badge">Development</span></h1>
+            <h1>ProScan <span style="font-size: 1.5rem;">with Tradingview</span> <span class="status-badge">Development</span></h1>
             <p class="subhead">Professional market scanning platform for momentum traders and setup-based strategies. Scan 1,000+ symbols in minutes, not hours.</p>
         </div>
     </header>
 
     <div class="container">
-                <div class="section">
+        <div class="section">
             <h2>The Problem</h2>
             <p style="margin-top: 1rem;">Professional traders scanning thousands of stocks for momentum, breakouts, and technical setups face a critical bottleneck: <strong>chart loading latency</strong>. When scanning 1,000+ charts, traders need to click through them rapidly — sometimes clicking through 10 charts to find just 1 that fits their setup, then repeating the process hundreds of times.</p>
             <p style="margin-top: 1rem;">A trained chartist needs only a millisecond to look at a chart and know whether it's worth exploring further. But web-based data fetching introduces unpredictable delays: a chart might load in 0.5 milliseconds, or it might take 5-10 seconds. During peak trading hours — especially before the US market open when load is highest — delays can exceed 10 seconds per chart.</p>
@@ -41,7 +41,7 @@
 
         <div class="section">
             <h2>The Solution</h2>
-            <p style="margin-top: 1rem;"><strong>ProScan</strong> eliminates data loading latency by moving the data layer local. The architecture:</p>
+            <p style="margin-top: 1rem;"><strong>ProScan with Tradingview</strong> eliminates data loading latency by moving the data layer local. The architecture:</p>
             <ul style="margin-top: 1rem; margin-left: 1.5rem;">
                 <li>Daily price data is pre-loaded into a local database</li>
                 <li>Charts render instantly from local storage—no network latency</li>
@@ -105,11 +105,17 @@
             <p style="font-size: 0.875rem; margin-top: 1rem;" id="ref1">[1] GitHub Issue #28, "Time lag in the result" - shner-elmo/TradingView-Screener</p>
             <p style="font-size: 0.875rem;">[2] TradingView Advanced Charts Documentation - Datafeed API implementation</p>
         </div>
+
+        <!-- License & Attribution Section -->
+        <div class="section">
+            <h2>License & Attribution</h2>
+            <p>This project will self-host the TradingView Advanced Charts library under the free license agreement. Proper attribution ("Charting library by TradingView") will remain visible in the final application as required.</p>
+        </div>
     </div>
 
     <footer>
-        <p>ProScan is a professional trading research tool. Built by a TradingView Pro user and professional trader.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.875rem;">Contact: [your email] | GitHub: [your username]</p>
+        <p>ProScan with Tradingview is a professional trading research tool. Built by a TradingView Pro user and professional trader.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.875rem;">Contact: schmidt.rene@gmail.com | GitHub: ReneYa3</p>
     </footer>
 </body>
 </html>
