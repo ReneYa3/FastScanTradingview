@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProScan | Professional Market Scanning Platform</title>
+    <meta name="description" content="High-performance market scanning platform for professional traders. Scan 1000+ stocks instantly with local data architecture.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1a1a2e; background: #f5f5fa; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 4rem 0; text-align: center; }
+        h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .subhead { font-size: 1.25rem; opacity: 0.9; max-width: 700px; margin: 0 auto; }
+        .section { background: white; border-radius: 12px; padding: 2rem; margin: 2rem 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        h2 { color: #1a1a2e; margin-bottom: 1rem; border-bottom: 3px solid #2962ff; display: inline-block; padding-bottom: 0.25rem; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+        .feature-card { background: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #2962ff; }
+        .tech-stack { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
+        .tech-tag { background: #e9ecef; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.875rem; }
+        .status-badge { display: inline-block; background: #ffc107; color: #1a1a2e; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; font-weight: bold; margin-left: 1rem; vertical-align: middle; }
+        footer { text-align: center; padding: 2rem; color: #6c757d; border-top: 1px solid #dee2e6; margin-top: 2rem; }
+        @media (max-width: 768px) { .container { padding: 1rem; } h1 { font-size: 2rem; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ProScan <span class="status-badge">Development</span></h1>
+            <p class="subhead">Professional market scanning platform for momentum traders and setup-based strategies. Scan 1,000+ symbols in seconds, not minutes.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <h2>The Problem</h2>
+            <p style="margin-top: 1rem;">Professional traders scanning thousands of stocks for momentum, breakouts, and technical setups face a critical bottleneck: <strong>data loading latency</strong>. TradingView's web-based data fetching creates delays that make comprehensive multi-symbol research impractical. As one trader forum member noted: <em>"The result from the API has a few minutes lag compared to the result directly from TradingView"</em> <a href="#ref1">[1]</a>.</p>
+            <p style="margin-top: 1rem;">This lag means traders either accept incomplete analysis or abandon the platform for research despite preferring its interface.</p>
+        </div>
+
+        <div class="section">
+            <h2>The Solution</h2>
+            <p style="margin-top: 1rem;"><strong>ProScan</strong> eliminates data loading latency by moving the data layer local. The architecture:</p>
+            <ul style="margin-top: 1rem; margin-left: 1.5rem;">
+                <li>Daily price data is pre-loaded into a local database</li>
+                <li>Charts render instantly from local storage—no network latency</li>
+                <li>Multiple data sources can be integrated and normalized</li>
+                <li>TradingView's Advanced Charts provide the professional interface traders already know</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Technical Architecture</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <strong>📦 Local Data Layer</strong>
+                    <p style="margin-top: 0.5rem;">SQLite/PostgreSQL database containing historical OHLCV data. Daily batch updates from multiple sources.</p>
+                </div>
+                <div class="feature-card">
+                    <strong>⚡ Custom Datafeed</strong>
+                    <p style="margin-top: 0.5rem;">JavaScript implementation of TradingView's Datafeed API that queries local database instead of remote endpoints.</p>
+                </div>
+                <div class="feature-card">
+                    <strong>📊 Advanced Charts</strong>
+                    <p style="margin-top: 0.5rem;">Full TradingView charting library with 100+ indicators, drawing tools, and multi-chart layouts.</p>
+                </div>
+                <div class="feature-card">
+                    <strong>💾 Chart Persistence</strong>
+                    <p style="margin-top: 0.5rem;">Save/load chart layouts and indicator templates to local storage or custom REST backend.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Current Status</h2>
+            <p style="margin-top: 1rem;"><strong>✅ Completed:</strong> Lightweight Charts prototype with JSON data storage. Working local data pipeline. Chart saving functionality.</p>
+            <p style="margin-top: 0.75rem;"><strong>🔄 In Progress:</strong> Migration from Lightweight Charts to Advanced Charts to unlock technical indicators and drawing tools.</p>
+            <p style="margin-top: 0.75rem;"><strong>📅 Planned:</strong> Multi-chart layouts, custom scanner UI, batch symbol processing.</p>
+        </div>
+
+        <div class="section">
+            <h2>Target Users</h2>
+            <ul style="margin-top: 1rem; margin-left: 1.5rem;">
+                <li>Professional momentum traders scanning 1000+ stocks daily</li>
+                <li>Technical analysts requiring consistent charting interface across research and execution</li>
+                <li>Quantitative researchers backtesting strategies on local data</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Technology Stack</h2>
+            <div class="tech-stack">
+                <span class="tech-tag">TradingView Advanced Charts</span>
+                <span class="tech-tag">Custom Datafeed API</span>
+                <span class="tech-tag">SQLite / PostgreSQL</span>
+                <span class="tech-tag">Python (data pipeline)</span>
+                <span class="tech-tag">JavaScript/HTML5</span>
+                <span class="tech-tag">Local-first architecture</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>References</h2>
+            <p style="font-size: 0.875rem; margin-top: 1rem;" id="ref1">[1] GitHub Issue #28, "Time lag in the result" - shner-elmo/TradingView-Screener</p>
+            <p style="font-size: 0.875rem;">[2] TradingView Advanced Charts Documentation - Datafeed API implementation</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>ProScan is a professional trading research tool. Built by a TradingView Pro user and professional trader.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.875rem;">Contact: [your email] | GitHub: [your username]</p>
+    </footer>
+</body>
+</html>
